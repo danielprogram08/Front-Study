@@ -16,11 +16,8 @@ header {
     background-color: white;
     width: 1200px;
     height: 200px;
-}
-
-h1 {
-    background-color: gray;
-    margin-top: 10px;
+    text-align: center;
+    font-style: italic;
 }
 
 nav {
@@ -28,6 +25,8 @@ nav {
     margin-top: 10px;
     width: 1200px;
     height: 50px;
+    font-style: italic;
+    text-align: center;
 }
 
 section {
@@ -36,6 +35,8 @@ section {
     width: 900px;
     height: 500px;
     float: left;
+    font-style: italic;
+    text-align: center;
 }
 
 aside {
@@ -46,6 +47,8 @@ aside {
     width: 290px;
     height: 500px;
     float: left;
+    font-style: italic;
+    text-align: center;
 }
 
 footer {
@@ -53,4 +56,6 @@ footer {
     width: 1200px;
     height: 60px;
     clear: both;
+    font-style: italic;
+    text-align: center;
 }
