@@ -1,0 +1,36 @@
+.cores {
+    width: 200px;
+    height: 200px;
+
+    /*gradiente linear;*/
+    background: linear-gradient(to top right, red,blue);
+    margin-bottom: 20px;
+}
+
+.cores2 {
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(red,blue,green);
+}
+
+#base {
+    background-color: green;
+    width: 600px;
+    height: 600px;
+}
+
+/*Foi trocado as posições de flutuo para melhor identificação de onde estão flutuando;*/
+#esquerda {
+    background-color: gray;
+    width: 300px;
+    height: 300px;
+    float: right;
+}
+
+#direita {
+    color: white;
+    background-color: black;
+    width: 300px;
+    height: 300px;
+    float: left;
+}

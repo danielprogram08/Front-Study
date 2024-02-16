@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--Tabelas;-->
+    <h1>Tabelas</h1>
+
+    <table>
+        <caption>Cadastro de Clientes</caption>
+
+        <tr>
+            <!--Títulos-->
+            <th>Nome:</th>
+            <th>Email:</th>
+            <th>Telefone:</th>
+        </tr>
+
+        <tr>
+            <!--Conteúdos-->
+            <td>Daniel</td>
+            <td>danieldanielsilva@gmail</td>
+            <td>86864017</td>
+
+            <!--Colspan: usado para preencher a informação em um número de colunas desejadas-->
+            <td colspan="2" class="Total">Total:1</td>
+        </tr>
+
+        <!--Chamando as Colunas-->
+        <colgroup>
+            <col class="Nome">
+            <col class="Email">
+            <col class="Telefone">
+        </colgroup>
+
+        <!--Estilizando a tabela-->
+        <style>
+            table,th,td {
+                border: 1px solid #000;
+            }
+
+            th,td {
+                padding: 7px;
+            }
+
+            /*Estilizando as colunas*/
+            .Nome {
+                background-color: red;
+            }
+
+            .Email {
+                background-color: green;
+            }
+
+            .Telefone {
+                background-color: grey;
+            }
+
+            .Total {
+                background-color: blue;
+            }
+
+        </style>
+        
+    </table>
+</body>
+</html>
