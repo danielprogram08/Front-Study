@@ -6,3 +6,27 @@ function soma(valor, valor2) {
 
 let resultado = soma(5, 5);
 console.log(resultado);
+
+//Objetos em JavaScript;
+const carro = {
+    marca: "Ford",
+    modelo: "Mustang",
+    ano: 2018,
+    cor: "Branco",
+
+    //método;
+    buzina: function () { alert("bii bii") },
+
+    //Retornando o Objeto;
+    completo: function () {
+    return console.log ("A marca é " + this.marca + " o Modelo é: " + this.modelo)   
+    }
+};
+
+//Chamando o Objeto;
+console.log(carro.marca);
+console.log(carro.modelo);
+
+//Chamando o Método;
+carro.buzina();
+carro.completo();
