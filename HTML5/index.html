@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://th.bing.com/th/id/OIP.TJPPqgPkbIoECkGmtCrmIQHaHa?rs=1&pid=ImgDetMain"
+        type="image/x-icon">
+    <title>pagina-1</title>
+</head>
+
+<body style="color: rgb(150, 48, 48); background-color: rgb(105, 105, 211); font-size: 80%;">
+
+    <h1 style="text-align: center;">Bem-Vindo ao meu site!</h1>
+    <p style="line-height: 30%; text-align: center;">Este é um exemplo de página HTML</p>
+
+    <table border="3" align="center">
+        <tr style="background-color: black; color: white;">
+            <td style="text-align: center;">Id</td>
+            <td style="text-align: center;">Nome</td>
+            <td style="text-align: center;">Email</td>
+            <td style="text-align: center;">Senha</td>
+        </tr>
+        <tr style="background-color: white;">
+            <td style="color: black;">01</td>
+            <td style="color: black;">Daniel</td>
+            <td style="color: black;">danieldanielsilva@gmail.com</td>
+            <td>.........</td>
+        </tr>
+    </table><br>
+
+    <br>
+    <form id="meu-form"
+        style=" height: 500px; width: 80%; border-radius: 15px; background-color: rgb(110, 32, 255); color: white; font-weight: bold;"
+        action="mailto: daniel.silva@gmail.com" method="post" enctype="text/plain" align="center">
+        Nome: <br>
+        <br><input type="text" name="Nome" size="30" maxlength="100" placeholder="nome:"> <br>
+
+        <br> Email: <br>
+        <br><input type="text" name="Email" size="30" maxlength="100" placeholder="email:"> <br>
+
+        <br> Cidade: <br>
+        <br><input type="text" name="Cidade" size="30" maxlength="100" placeholder="cidade:"> <br>
+
+        <br>Sexo: <br>
+        <br>Masculino: <input type="radio" name="sexo" placeholder="nome:">
+        Feminino: <input type="radio" name="sexo" placeholder="nome:"> <br>
+
+        <br> Conte como aprogramação mudou a sua vida :) <br>
+        <textarea cols="50" rows="5" name="comentários"></textarea> <br> <br>
+        <input type="checkbox" name="receber_info" checked>
+        Desejo receber notificação sobre cursos de programação <br> <br>
+
+        <input style="font-weight: bold; background-color: aqua; border-radius: 20px;" type="submit" value="Enviar Formulário"> <br> <br>
+
+        <input style="font-weight: bold; background-color: red; color: white; border-radius: 20px;" type="reset" value="Apagar Tudo">
+    </form>
+
+    <script>
+        document.getElementById("meu-form").addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const formData = new FormData(this);
+
+            let dados = "";
+
+            formData.forEach((value, key) => {
+                dados += `${key}: ${value}\n`;
+            });
+
+            const blob = new Blob([dados], { type: 'text/plain' });
+
+            const url = URL.createObjectURL(blob);
+
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'dados.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+
+            URL.revokeObjectURL(url);
+        });
+    </script>
+</body>
+
+</html>
