@@ -1,0 +1,57 @@
+header {
+    font-family: "Big Shoulders Stencil", sans-serif;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+body {
+    background: gray;
+    margin: 0;
+    padding: 0;
+}
+
+.produto {
+    background: white;
+    margin: 15px; /*Espaçamento exterior*/
+    padding: 15px; /*Espaçamento interior*/
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /*Sombreamento nas divs*/
+    width: 250px;
+    text-align: center;
+    transition: all 0.3s linear; /*Define uma transição suave com todos os atributos desta propriedade (.produto)*/
+}
+
+.produto:hover {
+    transform: scale(1.1); /*aumenta o tamanho da propriedade em 10% ao passar do cursor do mouse*/
+}
+
+.produtos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /*Definir quebra de linhas se necessário*/
+    margin: 20px;
+}
+
+.produto img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+button {
+    background: black;
+    height: 20px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s linear; 
+}
+
+button:hover {
+    background: gray;
+    cursor: pointer;
+}
